@@ -1,0 +1,14 @@
+[User]
+	name = matt.todd
+	email = matt.todd@asolutions.com
+
+[color]
+   diff = auto
+   status = auto
+   branch = auto
+
+[Alias]
+	ci = commit
+	co = checkout
+	st = status
+	br = branch

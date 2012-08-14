@@ -1,0 +1,15 @@
+#!/bin/bash
+
+args=("$@")
+search_string=${args[0]}
+
+echo "Searching for $search_string ..."
+
+for jar_file in $(find . -name "*.jar"); do
+   matches=$(jar -tvf $jar_file | grep $search_string | wc -l)
+   if [ $matches -ne 0 ]; then
+      echo "Match found in $jar_file"
+   fi
+done
+
+echo "...Done"
